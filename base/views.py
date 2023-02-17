@@ -207,6 +207,7 @@ def delete_blog(request):
     page.delete()
     return render(request,"home/view_blog.html",reguler_datas({'blog':page}))
 
+
 @login_required(login_url='/FourNotFout')
 def list_edit_blog(request):
     items = get_blog()
