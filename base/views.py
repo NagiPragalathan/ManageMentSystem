@@ -207,6 +207,7 @@ def delete_blog(request):
     page.delete()
     return render(request,"home/view_blog.html",reguler_datas({'blog':page}))
 
+
 @login_required(login_url='/FourNotFout')
 def list_edit_blog(request):
     items = get_blog()
@@ -832,7 +833,7 @@ def Upload_Image(request):
 
 
 def MBA (request):
-    return render(request,"mba.html",{'mentor':MBADB.objects.all()[::-1]})
+    return render(request,"mba.html",reguler_datas({'mentor':MBADB.objects.all()[::-1]}))
 
 @login_required(login_url='/FourNotFout')
 def MBA_edit(request):
@@ -1254,7 +1255,7 @@ def BundledServices_save (request):
     return render(request,"pages/samridth_edit.html")
 
 def edi(request):
-    return render(request,"edi.html",{'EDI_TOPSECTION':EDI_TOPSECTION.objects.all()[::-1],'EDI_Overview_Section':EDI_Overview_Section.objects.all()[::-1],'EDI_InnovationVoucher':EDI_InnovationVoucher.objects.all()[::-1],'EDI_WeAimAtSection':EDI_WeAimAtSection.objects.all()[::-1],'EDI_Eligibility_Section':EDI_Eligibility_Section.objects.all()[::-1]})
+    return render(request,"edi.html",reguler_datas({'EDI_TOPSECTION':EDI_TOPSECTION.objects.all()[::-1],'EDI_Overview_Section':EDI_Overview_Section.objects.all()[::-1],'EDI_InnovationVoucher':EDI_InnovationVoucher.objects.all()[::-1],'EDI_WeAimAtSection':EDI_WeAimAtSection.objects.all()[::-1],'EDI_Eligibility_Section':EDI_Eligibility_Section.objects.all()[::-1]}))
 
 @login_required(login_url='/FourNotFout')
 def edi_edit (request):
@@ -1319,7 +1320,7 @@ def EDI_Eligibility_Section_save(request):
 #............................................................
 #...............fishieries.........................................
 def fishieriespage(request):
-    return render(request,"fisheries.html",freguler_datas())
+    return render(request,"fisheries.html",freguler_datas(reguler_datas()))
 
 def update_fishieries(request):
     return render(request,"home/fishieries.html",freguler_datas(reguler_datas()))
