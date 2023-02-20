@@ -1,0 +1,6 @@
+djangify==1.0.0
+Django==3.2.4
+django-cors-headers==3.13.0
+django-rest-framework==0.1.0
+djangorestframework==3.14.0
+openpyxl==3.0.10

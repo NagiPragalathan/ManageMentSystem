@@ -1,4 +1,4 @@
-from .models import Gallery,Team,logo,blog, MentorConnectDB,OurStartup,DemoDayPic,fishieries,FooterEditPage,SocialMediaLinks
+from .models import Gallery,Team,logo,blog,OurStartup,DemoDayPic,fishieries,FooterEditPage,SocialMediaLinks
 import random
 def get_vals(request,data):
     datas = []
